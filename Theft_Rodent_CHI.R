@@ -113,12 +113,6 @@ merged_theft_rodent_sf <- st_sf(merged_theft_rodent)
 write_csv(merged_theft_rodent, "merged_theft_rodent.csv")
 st_write(merged_theft_rodent_sf, "merged_theft_rodent_sf.shp")
 
-# Note: For both data sets, we only keep data from 2018 to present, and since the rodent complain data
-# starts from 2018-02-25, to make sure the alignment of date and comparison between the two data sets
-# I filtered the crime data set to only keep data after 2018-02-25.
-# Crime Data source: https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-present-Dashboard/5cd6-ry5g
-# 311 Rodent Complain Data source: https://dev.socrata.com/foundry/data.cityofchicago.org/28me-84fj
-
 
 # Q2.2 Choropleth MAP
 
@@ -176,13 +170,4 @@ rodent_plt <- ggplot() +
 ggplotly(rodent_plt)
 
 #--------------------
-# Answer: For the crime data, we can research on whether theft cases (burglary and robbery included)
-# are concentrated in specific areas, especially areas with strong socioeconomic traits
-# and further discover whether theft cases are correlated to wealth, transportation etc.
-# For example, we can see from the plot that most theft cases occur around the loop and other downtown areas.
-# For the rodent report data, we noticed a different distribution pattern among areas
-# with cases converged in the north side but also in the west side. More research could be done to identify
-# whether it's because people living in the north are more sensitive to rodent/aware of possible risks/311 service
-# or it's because the north/west side do have more rodent than other areas
-# and analysis of rodent complain cases by different season would also be interesting.
   
